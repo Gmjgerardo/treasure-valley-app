@@ -33,13 +33,14 @@ export default function Slider() {
             <Text style={styles.titulo}>{x.title}</Text>
             <Image
               style={{
-                marginVertical: 20,
+                marginVertical: 0,
                 width: width * 0.9,
                 aspectRatio: 2,
                 resizeMode: "contain",
               }}
               source={{ uri: x.url }}
             />
+            <Text style={styles.subtitle}>{x.subtitle}</Text>
           </View>
         ))}
       </ScrollView>
@@ -49,6 +50,11 @@ export default function Slider() {
 
 const styles = StyleSheet.create({
   titulo: {
+    marginTop: 25,
+    fontWeight: "bold",
+    fontSize: 20,
+  },
+  subtitle: {
     marginTop: 25,
     fontWeight: "bold",
     fontSize: 20,
