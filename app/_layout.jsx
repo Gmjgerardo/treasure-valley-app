@@ -1,9 +1,22 @@
 import { Stack } from "expo-router/stack";
+import { StatusBar } from "expo-status-bar";
+import { useFonts } from "expo-font";
 
-export default function layout() {
+export default function Layout() {
+  const [fontsLoaded] = useFonts({
+    TVIcons: require("../assets/fonts/icons/icons.ttf"),
+  });
+
+  if (!fontsLoaded) {
+    return null;
+  }
+
   return (
-    <Stack screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="(tabs)" />
-    </Stack>
+    <>
+      <StatusBar style="light" />
+      <Stack screenOptions={{ headerShown: false }}>
+        <Stack.Screen name="(tabs)" />
+      </Stack>
+    </>
   );
 }
