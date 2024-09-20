@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "*": ["/*"],
+      "@components/*": ["./src/components/*"],
+      "@assets/*": ["./assets/*"],
+      "underscore": ["lodash"]
+    }
+  }
+}
